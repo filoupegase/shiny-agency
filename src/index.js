@@ -3,24 +3,20 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import { createGlobalStyle } from 'styled-components';
+import Footer from './_components/Footer';
+import { ThemeProvider } from './utils/context';
+import GlobalStyle from './utils/style/GlobalStyle';
 import './index.css';
 
-
-const GlobalStyle = createGlobalStyle`
-    * {
-      font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
-    body {
-      margin: 0;
-    }
-`;
 
 ReactDOM.render(
     <React.StrictMode>
       <Router>
-        <GlobalStyle/>
-        <App/>
+        <ThemeProvider>
+          <GlobalStyle/>
+          <App/>
+          <Footer/>
+        </ThemeProvider>
       </Router>
     </React.StrictMode>,
     document.getElementById('root')
