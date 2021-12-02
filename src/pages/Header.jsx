@@ -9,7 +9,7 @@ function Header() {
       <nav>
         <StyledLink to="/">Accueil</StyledLink>
         {" "}
-        <StyledLink to="/survey/42">Questionnaire</StyledLink>
+        <StyledLink to="/survey/1">Questionnaire</StyledLink>
         {" "}
         <StyledLink to="/freelances">Freelances</StyledLink>
       </nav>
